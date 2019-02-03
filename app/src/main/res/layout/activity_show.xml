@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="com.benoi.alex.benoisstore.ShowActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:text="@string/product_view"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp" />
+
+    <LinearLayout style="@style/LinearLayout1">
+
+        <LinearLayout style="@style/LinearLayout2">
+
+            <TextView
+                style="@style/TitleText"
+                android:text="@string/product_name" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/LinearLayout2">
+
+            <TextView
+                android:id="@+id/product_name_view_text"
+                style="@style/detail" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout style="@style/LinearLayout1">
+
+        <LinearLayout style="@style/LinearLayout2">
+
+            <TextView
+                style="@style/TitleText"
+                android:text="@string/product_price" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/LinearLayout2">
+
+            <TextView
+                style="@style/Currency"
+                android:layout_marginLeft="16dp"
+                android:text="@string/product_price_currency"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/product_price_view_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout style="@style/LinearLayout1">
+
+        <LinearLayout style="@style/LinearLayout2">
+
+            <TextView
+                style="@style/TitleText"
+                android:text="@string/product_quantity" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/LinearLayout2">
+
+
+            <Button
+                android:id="@+id/increase_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="16dp"
+                android:background="@color/blue"
+                android:text="+"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/product_quantity_view_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/decrease_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@color/blue"
+                android:text="-"
+                android:textColor="#fff" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/LinearLayout1">
+
+        <LinearLayout style="@style/LinearLayout2">
+
+            <TextView
+                style="@style/TitleText"
+                android:text="@string/product_supplier_name" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/LinearLayout2">
+
+            <TextView
+                android:id="@+id/product_supplier_name_view_text"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:paddingTop="18dp"
+                android:paddingRight="18dp"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout style="@style/LinearLayout1">
+
+        <LinearLayout style="@style/LinearLayout2">
+
+            <TextView
+                style="@style/TitleText"
+                android:text="@string/product_supplier_phone_number" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/LinearLayout2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/product_supplier_phone_number_view_text"
+                        style="@style/detail" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/LinearLayout2">
+
+                    <Button
+                        android:id="@+id/phone_button"
+                        android:layout_width="35dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="bottom"
+                        android:background="@color/blue"
+                        android:drawableLeft="@drawable/ic_phone_white_24dp"
+                        android:focusable="false" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/LinearLayout1"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/delete_button"
+            style="@style/Button"
+            android:drawableLeft="@drawable/ic_delete_white_24dp"
+            android:text="Delete" />
+    </LinearLayout>
+</LinearLayout>

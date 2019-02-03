@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/Editor"
+            android:text="@string/label_product_overview" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+
+            <EditText
+                android:id="@+id/product_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/edit_product_name"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+
+            <EditText
+                android:id="@+id/product_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/edit_price"
+                android:inputType="number"
+                android:maxLength="9" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/subtract_quantity"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:text="@string/button_minus_sign"
+                    android:textAppearance="?android:textAppearanceLarge" />
+
+                <EditText
+                    android:id="@+id/product_quantity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="@string/edit_quantity"
+                    android:inputType="number"
+                    android:maxLength="3" />
+
+                <Button
+                    android:id="@+id/add_quantity"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:text="@string/button_plus_sign"
+                    android:textAppearance="?android:textAppearanceLarge" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/Editor"
+            android:text="@string/label_supplier_overview" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <LinearLayout style="@style/LinearLayout1">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="18dp"
+                    android:text="@string/product_supplier_name"
+                    android:textSize="12sp" />
+
+                <Spinner
+                    android:id="@+id/product_supplier_name_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="14dp"
+                    android:paddingRight="10dp"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/supplier_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/edit_supplier_contact"
+                android:inputType="phone" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
